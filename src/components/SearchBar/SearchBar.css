@@ -1,0 +1,168 @@
+
+.SearchBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* .inputWrapper{ */
+    /* flex: 1;
+    background-color: #F0F0F0;
+    outline: none;
+    border: none; */
+    /* max-width: 326px; */
+    /* border: 1px solid #ABB6C7;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    position: relative; */
+/* } */
+
+/* .inputWrapper input{ */
+    /* outline: none;
+    border: none;
+    background-color: inherit;
+    font-size: 0.875rem;font-size: 14px; */
+    /* color: #ABB6C7; */
+/* } */
+
+.SearchPop{
+    position: absolute;
+    z-index: 1;
+    background-color: var(--color-white);
+    width: 100%;
+    top: calc(100% + 0.25rem);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 1rem 1rem;
+    max-height: 500px;
+    box-shadow: 6px 6px 35px 0px #1028511C;
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.SearchPopItem{
+    color: var(--color-grey);
+    font-size: 400;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #00000028;
+    cursor: pointer;
+}
+
+.SearchPopItem-bookings{
+    width: 100%;
+    color: var(--primary);
+}
+
+.disableCityInput{
+    opacity: 0.5;
+}
+
+
+.rotateLoad{
+    /* background-color: red; */
+    animation: rotate 2s forwards infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* Ensure wrapper relative for dropdown positioning */
+#state,
+#city {
+  position: relative;
+}
+
+/* Dropdown container (absolute below input) */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 4px;
+  padding: 0;
+}
+
+/* Each list item vertically stacked */
+.dropdown li {
+  display: block;
+  padding: 10px 12px;
+  list-style: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: #333;
+}
+
+/* Hover effect */
+.dropdown li:hover {
+  background-color: #f5f5f5;
+}
+
+/* Optional: smooth scrollbar */
+.dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+/* Dropdown styling for <ul> inside #state and #city */
+.inputWrapper .dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Dropdown list items */
+.inputWrapper .dropdownList li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.inputWrapper .dropdownList li:hover {
+  background-color: #f2f2f2;
+}
+
+/* Ensure parent wrapper has relative positioning */
+.inputWrapper {
+  position: relative;
+}
+
