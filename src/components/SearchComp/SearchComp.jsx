@@ -36,7 +36,7 @@ const SearchComp = () => {
                 <section className='commonContainer SearchCompBody'>
                     <SearchBar atHomePage={true} onSearchSubmit={handleSearchSubmit}/>
                     <section className='cardsDivWrapper'>
-                        <h2>You may be looking for</h2>
+                        <h1>You may be looking for</h1>
                         <nav className='cardsDiv'>
                             {displayCards()}
                         </nav>
